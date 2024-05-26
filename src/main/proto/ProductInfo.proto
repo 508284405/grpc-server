@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "com.example.grpcserver.grpc";
+service ProductInfo {
+  rpc addProduct(Product) returns (ProductID);
+  rpc getProduct(ProductID) returns (Product);
+}
+
+message Product{
+  optional string id = 1;
+  repeated string name = 2;
+  string description = 3;
+}
+
+message ProductID{
+  string value = 1;
+}

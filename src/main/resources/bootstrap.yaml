@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.3.18:8848
+#        namespace: 0ae93493-04b1-44c5-8223-0e6e8b8805db
+        group: DEFAULT_GROUP
+        file-extension: yaml
+#        shared-configs: redisson.yml
+      discovery:
+        server-addr: 192.168.3.18:8848
+#        namespace: 0ae93493-04b1-44c5-8223-0e6e8b8805db
+  application:
+    name: test1111
+  redis:
+    redisson:
+      file: classpath:redisson.yml
+logging:
+  level:
+    root: info
+    com.alibaba.cloud.nacos.**: debug

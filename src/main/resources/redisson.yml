@@ -1,0 +1,7 @@
+singleServerConfig:
+  address: "redis://192.168.3.17:55000"
+  database: 1
+threads: 16
+nettyThreads: 16
+codec: !<org.redisson.codec.JsonJacksonCodec> {}
+transportMode: "NIO"
